@@ -6,10 +6,10 @@ public class CurrencyConverter {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter base currency(EUR)(USD)(BRL): ");
+        System.out.println("Enter base currency(e.g. USD, EUR, BRL, JPY): ");
         String baseCurrency = scanner.nextLine();
 
-        System.out.println("Enter target currency(EUR)(USD)(BRL): ");
+        System.out.println("Enter target currency(e.g. BRL, USD, EUR, GBP): ");
         String targetCurrency = scanner.nextLine();
 
         System.out.println("Enter the amount you want to convert: ");
@@ -21,5 +21,8 @@ public class CurrencyConverter {
         double convertedAmount = exchangeService.convert(baseCurrency, targetCurrency, amount);
 
         System.out.println("Result: " + convertedAmount + " " + targetCurrency);
+
+        String jsonResult = exchangeService.fetchExchangeRates(baseCurrency);
+        System.out.println("\nJSON received from internet API:\n" + jsonResult);
     }
 }
