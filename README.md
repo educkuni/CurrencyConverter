@@ -27,8 +27,6 @@ Ensure the Gson library (com.google.code.gson:gson:2.10.1) is added to dependenc
 
 Run CurrencyConverter.java.
 
-Usage Example
-
 === CURRENCY CONVERTER ===
 Enter base currency (e.g. USD, EUR, BRL): 
 USD
@@ -38,3 +36,4 @@ Enter the amount you want to convert:
 100
 Converting USD 100.0 to BRL...
 Result: 593.15 BRL
+
